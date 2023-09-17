@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Inspection - Page source - Blocked - JS script</h1>
+
+    <code>
+        <pre>
+        // Disable context menu
+        document.addEventListener('contextmenu', function (e) {
+            e.preventDefault();
+        });
+
+        // Disable specific keyboard shortcuts
+        document.addEventListener('keydown', function (e) {
+            if (e.ctrlKey && (e.keyCode === 67 || e.keyCode === 86 || e.keyCode === 85 || e.keyCode === 117)) {
+                e.preventDefault();
+            }
+            if (e.which === 123) {
+                e.preventDefault();
+            }
+            if (e.metaKey) {
+                e.preventDefault();
+            }
+            // "I" key
+            if (e.ctrlKey && e.shiftKey && e.keyCode === 73) {
+                e.preventDefault();
+            }
+            // "J" key
+            if (e.ctrlKey && e.shiftKey && e.keyCode === 74) {
+                e.preventDefault();
+            }
+            // "S" key + macOS
+            if (e.keyCode === 83 && (navigator.platform.match('Mac') ? e.metaKey : e.ctrlKey)) {
+                e.preventDefault();
+            }
+            if (e.keyCode === 224 && (navigator.platform.match('Mac') ? e.metaKey : e.ctrlKey)) {
+                e.preventDefault();
+            }
+            // "U" key
+            if (e.ctrlKey && e.keyCode === 85) {
+                e.preventDefault();
+            }
+            // "F12" key
+            if (e.keyCode === 123) {
+                e.preventDefault();
+            }
+        });
+        </pre>
+    </code>
+
+    <script>
+        // Disable context menu
+        document.addEventListener('contextmenu', function (e) {
+            e.preventDefault();
+        });
+
+        // Disable specific keyboard shortcuts
+        document.addEventListener('keydown', function (e) {
+            if (e.ctrlKey && (e.keyCode === 67 || e.keyCode === 86 || e.keyCode === 85 || e.keyCode === 117)) {
+                e.preventDefault();
+            }
+            if (e.which === 123) {
+                e.preventDefault();
+            }
+            if (e.metaKey) {
+                e.preventDefault();
+            }
+            // "I" key
+            if (e.ctrlKey && e.shiftKey && e.keyCode === 73) {
+                e.preventDefault();
+            }
+            // "J" key
+            if (e.ctrlKey && e.shiftKey && e.keyCode === 74) {
+                e.preventDefault();
+            }
+            // "S" key + macOS
+            if (e.keyCode === 83 && (navigator.platform.match('Mac') ? e.metaKey : e.ctrlKey)) {
+                e.preventDefault();
+            }
+            if (e.keyCode === 224 && (navigator.platform.match('Mac') ? e.metaKey : e.ctrlKey)) {
+                e.preventDefault();
+            }
+            // "U" key
+            if (e.ctrlKey && e.keyCode === 85) {
+                e.preventDefault();
+            }
+            // "F12" key
+            if (e.keyCode === 123) {
+                e.preventDefault();
+            }
+        });
+    </script>
+</body>
+
+</html>
